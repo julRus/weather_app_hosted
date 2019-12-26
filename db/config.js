@@ -1,3 +1,5 @@
+const { DATABASE_URL } = process.env;
+
 const ENV = process.env.NODE_ENV || "development";
 const development = {
   host: "localhost",
@@ -6,6 +8,9 @@ const development = {
   username: "julia",
   password: "myPassword"
 };
+
+const production = `${DATABASE_URL}?ssl=true`;
+
 // const test = {
 //   host: "localhost",
 //   database: "",
@@ -13,5 +18,5 @@ const development = {
 //   username: "julia",
 //   password: "myPassword"
 // };
-const dbConfig = { development };
+const dbConfig = { development, production };
 module.exports = dbConfig[ENV];

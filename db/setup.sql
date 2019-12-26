@@ -3,11 +3,11 @@
 -- CREATE DATABASE weather_app;
 
 -- \c weather_app;
-
+DROP TABLE IF EXISTS users;
 CREATE TABLE users
 (
   users_id SERIAL PRIMARY KEY,
-  username VARCHAR(100),
+  username VARCHAR(100) UNIQUE,
   firstName VARCHAR(100),
   lastName VARCHAR(100),
   email VARCHAR(100),
