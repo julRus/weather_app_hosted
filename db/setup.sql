@@ -21,6 +21,11 @@ INSERT INTO "users"
 VALUES
   ('jessJelly', 'jessica', 'evans', 'jess_evans123@gmail.com', 'myPassword@123', 'https:
 //i.pinimg.com/originals/0b/11/59/0b1159a00d745ddacc8da192f68fed5a.gif');
+INSERT INTO "users"
+  (username, firstName, lastName, email, password, img_url)
+VALUES
+  ('bobo', 'bob', 'bobbyson', 'bob_bobbyson@hotmail.co.uk', 'myOtherPassword@123', 'https:
+//i.pinimg.com/originals/0b/11/59/0b1159a00d745ddacc8da192f68fed5a.gif');
 
 SELECT *
 FROM "users";
